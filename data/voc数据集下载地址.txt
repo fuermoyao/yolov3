@@ -1,0 +1,6 @@
+下载地址：https://pjreddie.com/projects/pascal-voc-dataset-mirror/
+
+数据集默认标注格式为xml，提供了parseVOCLabel.py，将xml格式转为txt格式
+使用示例：
+    1、进入voc0712数据集
+    2、python3 parseVOCLabel.py

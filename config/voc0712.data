@@ -1,0 +1,4 @@
+classes= 20
+train=data/voc0712/train.txt
+valid=data/voc0712/valid.txt
+names=data/voc0712/classes.names
