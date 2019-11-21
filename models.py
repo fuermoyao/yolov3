@@ -334,3 +334,7 @@ class Darknet(nn.Module):
                 conv_layer.weight.data.cpu().numpy().tofile(fp)
 
         fp.close()
+        
+if __name__ == "__main__":    
+    module_list = create_modules(parse_model_config("./config/yolov3-voc0712.cfg"))    
+    print(module_list)
