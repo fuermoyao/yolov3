@@ -44,17 +44,10 @@ if __name__ == "__main__":
     #print("type(opt) --> ",type(opt))
     print(opt)
     
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
     os.makedirs("output", exist_ok=True)
     os.makedirs("checkpoints", exist_ok=True)
-
-    # Get data configuration
-    data_config = parse_data_config(opt.data_config)
-    train_path = data_config["train"]
-    valid_path = data_config["valid"]
-    class_names = load_classes(data_config["names"])
-
+    
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     # Initiate model
     model = Darknet(opt.model_def,img_size=opt.img_size).to(device)
     model.apply(weights_init_normal)
@@ -70,6 +63,12 @@ if __name__ == "__main__":
         if i == 156:
             break
         p[1].requires_grad = False
+        
+    # Get data configuration
+    data_config = parse_data_config(opt.data_config)
+    train_path = data_config["train"]
+    valid_path = data_config["valid"]
+    class_names = load_classes(data_config["names"])
     
     # Get dataloader
     dataset = ListDataset(train_path, augment=True, multiscale=opt.multiscale_training)
