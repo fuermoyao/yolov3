@@ -7,6 +7,8 @@ https://github.com/eriklindernoren/PyTorch-YOLOv3
 
 欢迎关注微信公众号：`AI视觉联盟`，获取yolo原理及代码中文解析
 
+![the public of wechat](https://github.com/fuermoyao/yolov3/blob/master/the%20public%20of%20wechat.png)
+
 已完成：
 
 >[【目标检测算法解读】yolo系列算法一](https://mp.weixin.qq.com/s?__biz=MzA5NTcwMTM4Mg==&mid=2247483694&idx=1&sn=69908d4a663cb61981038655d74d5bc4&chksm=90ba11c7a7cd98d1bfda256cb45dca6fa7f1d7c9cf98cbad7739d32aa4e17e64720ad426703a&scene=21#wechat_redirect)
